@@ -1,0 +1,848 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KOMACON';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wraper {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/************************* 헤더 *************************/
+.fix {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 100px;
+    background-color: #fff;
+
+}
+
+header {
+    height: 100px;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.h100 {
+    height: 100px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    width: 170px;
+    height: 100px;
+}
+
+header .gnb {
+    display: flex;
+    gap: 40px;
+    margin-top: 45px;
+    margin-right: 900px;
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+    overflow: hidden;
+    height: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+header .gnb:hover {
+    height: 200px;
+}
+
+header .gnb::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    background-color: #fff;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease 0s;
+}
+
+header .gnb:hover::after {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+header .sub {
+    padding-top: 10px;
+    color: #bbb;
+}
+
+header .sub>li:hover a {
+    color: #000;
+}
+
+header .sub>li {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+header .icon {
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************* 메인-슬라이드 *************************/
+.mainslide-box {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 250px;
+}
+
+.mainslide-box .swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.mainslide-box .swiper .navigation {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.mainslide-box .swiper .navigation>div {
+    width: 100px;
+    height: 25px;
+}
+
+.mainslide-box .swiper .navigation>div img {
+    height: 100%;
+    width: auto;
+}
+
+.mainslide-box .swiper img,
+.mainslide-box .swiper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainslide-box .swiper-pagination {}
+
+.mainslide-box .swiper-pagination .swiper-pagination-bullet {
+    background-color: #fff;
+}
+
+
+
+
+
+/************************* 베스트 아이템 *************************/
+.best-item {
+    align-content: center;
+    margin-bottom: 250px;
+}
+
+.best-item>h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Pretendard-Regular';
+}
+
+.best-item>.container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-item>.container .item {
+    width: 24%;
+}
+
+.best-item>.container .item .img-box {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.6s ease 0s;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.best-item>.container .item .icon-box {
+    width: 40%;
+    display: flex;
+    margin: 0 auto;
+    gap: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: -100px;
+    transform: translateX(-50%);
+
+    transition: 1s;
+}
+
+.best-item>.container .item:hover .icon-box {
+    bottom: 20px;
+}
+
+.best-item>.container .item .icon-box img {
+    width: calc((100% - 20px) / 2);
+}
+
+.best-item .container .item .title {
+    font-size: 15px;
+    font-family: 'S-CoreDream-3Light';
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.best-item .container .source .be {
+    font-size: 14px;
+    color: #bbb;
+    text-decoration: line-through;
+    margin-right: 20px;
+    font-family: 'Pretendard-Regular';
+}
+
+.best-item .source span:last-child {
+    font-size: 14px;
+    font-family: 'Pretendard-Regular';
+    font-weight: 600;
+    color: rgb(17, 94, 74);
+}
+
+
+
+
+
+/************************* 브랜드 이미지 *************************/
+.brand-img {
+    margin-bottom: 250px;
+}
+
+.brand-img>.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+}
+
+.brand-img .text-box {
+    width: 30%;
+    box-sizing: border-box;
+    align-content: center;
+}
+
+.brand-img .text-box .title {
+    font-family: 'S-CoreDream-3Light';
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.brand-img .text-box img {
+    width: 40%;
+    margin-bottom: 50px;
+}
+
+.brand-img .text-box .source {
+    font-family: 'S-CoreDream-3Light';
+    margin-bottom: 40px;
+}
+
+.brand-img .text-box .button {
+    width: 40%;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(17, 94, 74);
+    font-family: 'Pretendard-Regular';
+    color: #fff;
+}
+
+.brand-img .img-box {
+    width: 80%;
+    overflow: hidden;
+}
+
+.brand-img .img-box:hover img {
+    transition: 2s;
+    scale: 1.5;
+}
+
+
+
+
+/************************* 이벤트 이미지 *************************/
+.event-img {
+    display: flex;
+    margin-bottom: 250px;
+    position: relative;
+}
+
+.event-img .container {
+    width: 50%;
+    position: relative;
+    transition: 1s;
+    top: 0;
+}
+
+.event-img .container .gr {
+    background: linear-gradient(to bottom, rgba(255, 165, 149, 0) 60%, rgb(255, 165, 149) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 1s;
+}
+
+.event-img .container:hover {
+    top: -70px;
+}
+
+.event-img .container:hover .gr {
+    opacity: 1;
+}
+
+.event-img .container:hover .text-box {
+    bottom: 270px;
+}
+
+.event-img .container img {
+    height: 500px;
+}
+
+.event-img .container .bg {
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.event-img .container .text-box {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    font-family: 'S-CoreDream-3Light';
+    color: #fff;
+    transition: 1s;
+}
+
+.event-img .container .text-box h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.event-img .container .text-box p {
+    margin-bottom: 40px;
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
+}
+
+
+
+/************************* 프로모션 *************************/
+.promotion {
+    margin-bottom: 250px;
+}
+
+.promotion h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: 'Pretendard-Regular';
+}
+
+.promotion .tap-menu {
+    width: 18%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    font-family: 'S-CoreDream-3Light';
+    font-weight: bold;
+}
+
+.promotion .tap-menu .menu-li {
+    padding: 1% 5%;
+    cursor: pointer;
+}
+
+.promotion .tap-menu .menu-li.act {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+.promotion .menu-slide-wrap {
+    display: none;
+}
+
+.promotion .menu-slide-wrap.act {
+    display: block;
+}
+
+
+
+
+
+
+
+
+.promotion .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.promotion .container .item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.promotion .container .item>div {
+    width: 24%;
+    margin-bottom: 30px;
+}
+
+.promotion .container .item>div .img-box {
+    width: 100%;
+    height: 360px;
+    margin-bottom: 12px;
+    transition: all 0.6s ease 0s;
+    background-size: cover;
+}
+
+.promotion .container .item>div h4 {
+    font-size: 15px;
+    font-family: 'S-CoreDream-3Light';
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.promotion .container .source .be {
+    font-size: 14px;
+    color: #bbb;
+    text-decoration: line-through;
+    margin-right: 20px;
+    font-family: 'Pretendard-Regular';
+}
+
+.promotion .source span:last-child {
+    font-size: 14px;
+    font-family: 'Pretendard-Regular';
+    font-weight: 600;
+    color: rgb(17, 94, 74);
+}
+
+
+
+
+
+
+/************************* 베스트셀러 *************************/
+.best-seller {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 250px;
+    font-family: 'S-CoreDream-3Light';
+}
+
+.best-seller .item {
+    position: relative;
+}
+
+.best-seller .item img {
+    height: 500px;
+}
+
+.best-seller .text-box {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+.best-seller .item:nth-child(1) {
+    color: #fff;
+}
+
+.best-seller .item:nth-child(1) .s-title {
+    width: 100px;
+    height: 23px;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(17, 94, 74);
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.best-seller .item:nth-child(2) .s-title {
+    width: 100px;
+    height: 23px;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(238, 85, 58);
+    font-size: 12px;
+    margin-left: auto;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+.best-seller .item:nth-child(3) .s-title {
+    width: 140px;
+    height: 23px;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(245, 228, 72);
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.best-seller .item:nth-child(2) .text-box {
+    left: auto;
+    right: 100px;
+    text-align: right;
+}
+
+.best-seller .text-box .title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.best-seller .text-box .source {
+    line-height: 25px;
+}
+
+
+
+
+/************************* 스토리 이미지 *************************/
+.story {
+    margin-bottom: 250px;
+}
+
+.story h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Pretendard-Regular';
+}
+
+.story .container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.story .container .item {
+    width: 32.5%;
+}
+
+.story .container .item img {
+    height: 700px;
+    margin-bottom: 20px;
+}
+
+.story .container .item .text-box h3 {
+    margin-bottom: 10px;
+    font-family: 'Pretendard-Regular';
+}
+
+.story .container .item .text-box p {
+    font-family: 'S-CoreDream-3Light';
+    font-size: 15px;
+}
+
+
+
+
+
+/************************* 리뷰 *************************/
+.review-box {
+    width: 100%;
+    overflow: hidden;
+}
+
+.review {
+    height: 40vh;
+    width: 120%;
+    position: relative;
+    left: -10%;
+    /* background-color: rgb(198, 219, 194); */
+    margin-bottom: 250px;
+    align-content: center;
+    font-family: 'S-CoreDream-3Light';
+}
+
+.review .container {
+    text-align: center;
+    height: 100%;
+}
+
+.review .container .star {
+    color: rgb(17, 94, 74);
+    font-size: 30px;
+}
+
+.review .container h2 {
+    font-size: 55px;
+    color: rgb(17, 94, 74);
+    margin-bottom: 30px;
+    font-family: 'Pretendard-Regular';
+}
+
+.review .container h4 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.review .container p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.review .container .name {
+    font-size: 12px;
+    color: #888;
+}
+
+
+
+
+
+
+
+/************************* 인스타그램 *************************/
+.instagram {
+    align-content: center;
+    margin-bottom: 400px;
+    overflow: hidden;
+}
+
+.instagram h3 {
+    margin-left: 250px;
+    font-family: 'Pretendard-Regular';
+}
+
+.instagram .item {
+    margin-top: 20px;
+    margin-left: 250px;
+    display: flex;
+}
+
+.instagram .item img {
+    width: 600px;
+    height: 600px;
+    display: block;
+    border: 1px solid #ffffff;
+}
+
+.instagram .item .img-box {
+    width: 600px;
+    height: 600px;
+}
+
+.instagram .item .img-box img {
+    width: 300px;
+    height: calc(100% / 2);
+}
+
+
+
+
+/************************* footer *************************/
+footer {
+    height: 50vh;
+    background-color: rgb(17, 94, 74);
+}
+
+footer h1 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Pretendard-Regular';
+}
+
+footer p {
+    font-size: 13px;
+    color: #fff;
+    font-family: 'S-CoreDream-3Light';
+}
+
+footer .container .inner {
+    margin: 0 5%;
+}
+
+footer .container .inner .section {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .inner .section .box1 .brand {
+    margin-bottom: 45px;
+}
+
+footer .container .inner .section .box1 .brand .text-box {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+footer .container .inner .section .box1 .basic .text-box>p {
+    padding-bottom: 5px;
+}
+
+footer .container .inner .section .box2 .cs {
+    margin-bottom: 75px;
+}
+
+footer .container .inner .section .box2 .cs .text-box>p {
+    margin-bottom: 5px;
+}
+
+footer .container .inner .section .box2 .con {
+    margin-bottom: 75px;
+}
+
+footer .container .inner .section .box2 .con .text-box {
+    width: 300px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .inner .section .box2 .help .text-box {
+    width: 250px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .inner .section .box3 .icon {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .inner .section .box3 a>img {
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+footer .container .inner .section .box3 .text-box {
+    margin-bottom: 120px;
+}
+
+footer .container .inner .section .box3 .text-box>p {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+footer .container .inner .section .box3 .icon a>img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+/************************* top 버튼 *************************/
+.top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    z-index: 5;
+    opacity: 0;
+    transition: 3s;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.top.act {
+    opacity: 1;
+}

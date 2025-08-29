@@ -1,0 +1,110 @@
+/************************* 베스트 아이템 *************************/
+.best-item>.container .item .img-box:nth-child(1){
+    background-image: url(../img/42447697519047674_1089891617.jpg);
+}
+.best-item>.container .item:nth-child(1) .img-box:hover{
+    background-image: url(../img/42447686098192160_567141478.jpg);
+}
+.best-item>.container .item:nth-child(2) .img-box{
+    background-image: url(../img/38455662872382638_92122959.jpg);
+}
+.best-item>.container .item:nth-child(2) .img-box:hover{
+    background-image: url(../img/2949889843906721_495979549.jpg);
+    background-position: 0 calc(50% - 5px);
+}
+.best-item>.container .item:nth-child(3) .img-box{
+    background-image: url(../img/42447560136370585_315635925.jpg);
+}
+.best-item>.container .item:nth-child(3) .img-box:hover{
+    background-image: url(../img/11747033094792196_510113349.jpg);
+}
+.best-item>.container .item:nth-child(4) .img-box{
+    background-image: url(../img/11731457529510503_653769046.jpg);
+}
+.best-item>.container .item:nth-child(4) .img-box:hover{
+    background-image: url(../img/56229044628216365_571450034.jpg);
+    background-position: 0 calc(50% - 5px);
+}
+
+
+
+
+/************************* 프로모션 *************************/
+.promotion .tap-source .container .item .box1 .img-box{
+    background-image: url(../img/11731457529510503_653769046.jpg);
+}
+.promotion .tap-source .container .item .box1 .img-box:hover{
+    background-image: url(../img/11731457114650564_1295084463.jpg);
+}
+.promotion .tap-source .container .item .box2 .img-box{
+    background-image: url(../img/42447560136370585_315635925.jpg);
+}
+.promotion .tap-source .container .item .box2 .img-box:hover{
+    background-image: url(../img/37189050852867942_534821469.jpg);
+}
+.promotion .tap-source .container .item .box3 .img-box{
+    background-image: url(../img/11747033094792196_510113349.jpg);
+}
+.promotion .tap-source .container .item .box4 .img-box{
+    background-image: url(../img/11731408721335212_1571845748.jpg);
+}
+.promotion .tap-source .container .item .box5 .img-box{
+    background-image: url(../img/77408587558246872_159781949.jpg);
+}
+.promotion .tap-source .container .item .box6 .img-box{
+    background-image: url(../img/42447697519047674_1089891617.jpg);
+}
+.promotion .tap-source .container .item .box6 .img-box:hover{
+    background-image: url(../img/42447686098192160_567141478.jpg);
+}
+.promotion .tap-source .container .item .box7 .img-box{
+    background-image: url(../img/38455662607170789_2108014356.jpg);
+}
+.promotion .tap-source .container .item .box7 .img-box:hover{
+    background-image: url(../img/38455662872382638_92122959.jpg);
+}
+.promotion .tap-source .container .item .box8 .img-box{
+    background-image: url(../img/60823689618092884_1176909050.jpg);
+}
+
+
+
+
+
+.promotion .tap-source .container .item .box25 .img-box{
+    background-image: url(../img/11731408721335212_1571845748.jpg);
+}
+.promotion .tap-source .container .item .box25 .img-box:hover{
+    background-image: url(../img/38334756002250347_792953475.jpg);
+}
+.promotion .tap-source .container .item .box26 .img-box{
+    background-image: url(../img/21208218902498259_119915530.jpg);
+}
+.promotion .tap-source .container .item .box26 .img-box:hover{
+    background-image: url(../img/117664656957183714_105330574.jpg);
+}
+.promotion .tap-source .container .item .box27 .img-box{
+    background-image: url(../img/38334753831214792_1057248097.jpg);
+}
+.promotion .tap-source .container .item .box28 .img-box{
+    background-image: url(../img/118011222744250471_942658669.jpg);
+}
+.promotion .tap-source .container .item .box28 .img-box:hover{
+    background-image: url(../img/38473461149971754_1212503985.jpg);
+}
+.promotion .tap-source .container .item .box29 .img-box{
+    background-image: url(../img/22222.jpg);
+}
+.promotion .tap-source .container .item .box30 .img-box{
+    background-image: url(../img/image_p81gbrhe5h545c1qpe4vd5ho22.jpg);
+}
+.promotion .tap-source .container .item .box31 .img-box{
+    background-image: url(../img/image_re3b6qbiv11vret482on7ogq7a.jpg);
+}
+.promotion .tap-source .container .item .box31 .img-box:hover{
+    background-image: url(../img/118258534857626242_1037890298.jpg);
+}
+.promotion .tap-source .container .item .box32 .img-box{
+    background-image: url(../img/image_nh8urddan933d409d79rd8o457.jpg);
+}
+
