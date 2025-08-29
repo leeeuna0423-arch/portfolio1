@@ -87,7 +87,7 @@ header .gnb {
     display: flex;
     gap: 40px;
     margin-top: 45px;
-    margin-right: 900px;
+    margin-right: 800px;
     text-align: center;
     font-family: 'Pretendard-Regular';
     overflow: hidden;
@@ -845,4 +845,5 @@ footer .container .inner .section .box3 .icon a>img {
 
 .top.act {
     opacity: 1;
+
 }
